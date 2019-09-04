@@ -350,3 +350,17 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.home .drag {
+  display: flex;
+}
+.home .box {
+  width: 150px;
+  height: 150px;
+  background: black;
+  margin: 10px;
+}
+.home .fill {
+  width: 140px;
+  height: 140px;
+  background: yellow;
+}
