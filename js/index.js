@@ -67,16 +67,7 @@ const bodyTag = document.querySelector('body');
 window.addEventListener('dblclick', () => {bodyTag.style.background="gray"});
 
 
-//Nest two similar events somewhere in the site and prevent the event propagation properly
-document.querySelector('.btn').addEventListener('click', (e) => {
- 
-    
-    alert('You clicked the first button'); 
-    
-  e.addEventListener('click', () => {
-    bodyTag.style.background="pink";
-  })
-});
+
 
 
 
@@ -97,3 +88,16 @@ document.querySelectorAll('a').forEach((a) => {
     event.preventDefault(); 
   })
 }); 
+
+
+//Nest two similar events somewhere in the site and prevent the event propagation properly
+
+document.querySelector('.destination').addEventListener('click', (e) => {
+  
+  console.log(` div was clicked`);
+  document.querySelector('.destination p').addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log(`paragraph was clicked`)
+  })
+});
+
